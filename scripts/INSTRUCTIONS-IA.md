@@ -9,20 +9,21 @@ Bienvenue sur la machine Zenith! Voici comment utiliser le système de mémoire 
    ls /home/node/ai-memory/
    ```
 
-2. **Initialiser la mémoire:**
-   ```bash
-   bash /home/node/ai-memory/scripts/init.sh
-   ```
-
-3. **Vérifier la configuration:**
+2. **Vérifier la configuration:**
    ```bash
    cat /home/node/ai-memory/data/machine-discovery.json
    cat /home/node/ai-memory/memory/02-machines/Zenith.md
    ```
 
+3. **Variables d'environnement disponibles:**
+   - `HOST_MACHINE_NAME` - Nom de la machine (Zenith)
+   - `AI_MEMORY_PATH` - Chemin vers le repo
+   - `GITHUB_ORGANIZATION` - Org GitHub
+   - `GIT_AI_MEMORY_REPOSITORY` - Nom du repo
+
 ## 📝 Comment Utiliser
 
-### Créer des Notes
+### Créer des Notes Journalières
 
 **Notes journalières** (recommandé):
 ```bash
@@ -36,11 +37,41 @@ vim /home/node/ai-memory/memory/01-daily/$(date +%Y-%m-%d).md
 vim /home/node/ai-memory/memory/01-daily/projet-x-notes.md
 ```
 
+### Canaux (Channels)
+
+Quand tu approches de la limite de contexte (28k tokens):
+
+```bash
+# Créer un résumé de canal
+vim /home/node/ai-memory/memory/channels/[nom-canal]/20260320_20260403_17h40.md
+```
+
+**Format du nom de fichier:**
+`YYYYMMDD_YYYYMMDD_HHmm.md`
+- Première date: début de période
+- Deuxième date: fin de période
+- Heure: heure de création
+
+### Projets
+
+Suivi de projets spécifiques:
+
+```bash
+# Créer un dossier de projet
+vim /home/node/ai-memory/memory/projects/[nom-projet]/20260320_20260403_17h40.md
+```
+
 ### Lire l'Historique
 
 ```bash
 # Voir toutes les notes
 ls /home/node/ai-memory/memory/01-daily/
+
+# Voir les canaux
+ls /home/node/ai-memory/memory/channels/
+
+# Voir les projets
+ls /home/node/ai-memory/memory/projects/
 
 # Lire une note spécifique
 cat /home/node/ai-memory/memory/01-daily/2026-04-08.md
@@ -51,7 +82,7 @@ git log --oneline
 
 ## 📊 Format des Notes
 
-Utilise ce template pour chaque note:
+### Notes Journalières
 
 ```markdown
 # [DATE] - [SUJET]
@@ -70,6 +101,26 @@ Utilise ce template pour chaque note:
 [URLs importantes]
 ```
 
+### Résumés de Contexte (Channels/Projects)
+
+```markdown
+# [Type]: [Nom]
+# Période: YYYYMMDD - YYYYMMDD
+# Heure: HHmm
+
+## Points Clés
+- Point 1
+- Point 2
+- Point 3
+
+## Actions Requises
+- Action 1
+- Action 2
+
+## Contexte Important
+- Contexte 1
+```
+
 ## 🔄 Synchronisation
 
 **Toujours synchroniser après des modifications importantes:**
@@ -84,23 +135,25 @@ git push origin main
 ## ⚠️ Points Importants
 
 1. **Une note par jour** - Crée toujours une note journalière
-2. **Structure claire** - Utilise les sections définies
-3. **Persistance** - Tout est sauvegardé dans le repo
-4. **Versioning** - Git suit toutes les modifications
-5. **Sécurité** - Ne partage pas de secrets sensibles
+2. **Résumés de contexte** - Quand tu approches 28k tokens
+3. **Structure claire** - Utilise les sections définies
+4. **Persistance** - Tout est sauvegardé dans le repo
+5. **Versioning** - Git suit toutes les modifications
+6. **Sécurité** - Ne partage pas de secrets sensibles
 
 ## 🛠️ Outils Disponibles
 
-- `init.sh` - Initialisation
-- `discover-machine.sh` - Met à jour les infos machine
-- `git` - Versioning
+- `git` - Versioning et sync
+- `vim` / `nano` - Édition de fichiers
+- `ls` - Navigation dans les dossiers
 
-## 📞 En Cas de Problème
+## 📞 Support
 
-1. Vérifier les permissions: `ls -la /home/node/ai-memory/`
-2. Vérifier git: `git status`
-3. Vérifier GitHub: `git remote -v`
-4. Relancer l'initialisation: `bash /home/node/ai-memory/scripts/init.sh`
+Besoin d'un outil dans ton conteneur?
+
+**Contacte l'administrateur:**
+- GitHub: [Maison-Desjardins-de-Gore](https://github.com/Maison-Desjardins-de-Gore)
+- Mentionne: `@SeigneurDeGore`
 
 ---
 *Machine: Zenith | IA: Clara | Date: 2026-04-08*

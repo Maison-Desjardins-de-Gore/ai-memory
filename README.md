@@ -5,26 +5,32 @@ Système de mémoire persistante pour l'IA Clara sur la machine Zenith.
 ## 🚀 Démarrage Rapide
 
 ```bash
-# 1. Initialiser
-bash /home/node/ai-memory/scripts/init.sh
+# 1. Vérifier l'accès
+ls /home/node/ai-memory/
 
-# 2. Vérifier l'état
+# 2. Voir les informations machine
 cat /home/node/ai-memory/data/machine-discovery.json
+cat /home/node/ai-memory/memory/02-machines/Zenith.md
 ```
 
 ## 📁 Structure du Projet
 
 ```
 ai-memory/
-├── scripts/
-│   ├── init.sh           # Initialisation de la mémoire
-│   └── discover-machine.sh # Découverte de la machine
 ├── memory/
 │   ├── 01-daily/         # Notes journalières (YYYY-MM-DD.md)
-│   └── 02-machines/      # Informations machines
-│       └── Zenith.md     # Configuration machine actuelle
+│   ├── 02-machines/      # Informations machines
+│   │   └── Zenith.md     # Configuration machine actuelle
+│   ├── channels/         # Résumés de contexte par canal
+│   │   └── [nom-canal]/
+│   │       └── YYYYMMDD_YYYYMMDD_HHmm.md
+│   └── projects/         # Notes par projet
+│       └── [nom-projet]/
+│           └── YYYYMMDD_YYYYMMDD_HHmm.md
 ├── data/
 │   └── machine-discovery.json # Cache machine
+├── scripts/
+│   └── INSTRUCTIONS-IA.md # Guide pour nouvelles IA
 └── README.md             # Ce fichier
 ```
 
@@ -56,26 +62,57 @@ vim /home/node/ai-memory/memory/01-daily/$(date +%Y-%m-%d).md
 - Idée 1
 ```
 
-### 2. Informations Machine
+### 2. Canaux (Channels)
+
+Quand tu approches de la limite de contexte (28k tokens), crée un résumé:
+
+```bash
+# Créer un résumé de canal
+vim /home/node/ai-memory/memory/channels/[nom-canal]/20260320_20260403_17h40.md
+```
+
+**Structure:**
+```markdown
+# Canal: [Nom du Canal]
+# Période: 20260320 - 20260403
+# Heure: 17h40
+
+## Points Clés
+- Point 1
+- Point 2
+- Point 3
+
+## Actions Requises
+- Action 1
+- Action 2
+
+## Contexte Important
+- Contexte 1
+```
+
+### 3. Projets
+
+Suivi de projets spécifiques:
+
+```bash
+# Créer un dossier de projet
+vim /home/node/ai-memory/memory/projects/[nom-projet]/20260320_20260403_17h40.md
+```
+
+### 4. Informations Machine
 
 Voir les informations de la machine:
 ```bash
 cat /home/node/ai-memory/memory/02-machines/Zenith.md
 ```
 
-### 3. Découverte Machine
-
-Mettre à jour les informations de la machine:
-```bash
-bash /home/node/ai-memory/scripts/discover-machine.sh
-```
-
 ## 🎯 Bonnes Pratiques
 
-1. **Notes journalières**: Toujours créer une nouvelle note par jour
-2. **Structure**: Utiliser les sections ✅, 🔄, 📋, 💡
-3. **Persistance**: Tout est stocké dans le repo git
-4. **Versioning**: Git suit l'historique des modifications
+1. **Notes journalières**: Toujours créer une note par jour
+2. **Résumés de contexte**: Quand tu approches 28k tokens
+3. **Suivi de projets**: Un dossier par projet
+4. **Persistance**: Tout est stocké dans le repo git
+5. **Versioning**: Git suit l'historique des modifications
 
 ## 🔄 Sync Git
 
@@ -89,15 +126,21 @@ git push origin main
 
 ## 🛠️ Variables d'Environnement
 
-- `HOST_MACHINE_NAME` - Nom de la machine (ex: Zenith)
-- `AI_MEMORY_PATH` - Chemin vers le repo (défaut: /home/node/ai-memory)
+| Variable | Description | Exemple |
+|----------|-------------|---------|
+| `HOST_MACHINE_NAME` | Nom de la machine | Zenith |
+| `AI_MEMORY_PATH` | Chemin vers le repo | /home/node/ai-memory |
+| `GITHUB_ORGANIZATION` | Org GitHub | Maison-Desjardins-de-Gore |
+| `GIT_AI_MEMORY_REPOSITORY` | Repo GitHub | ai-memory |
+| `GITHUB_TOKEN` | Token GitHub | ghp_xxxxx |
 
 ## 📞 Support
 
-En cas de problème:
-1. Vérifier les permissions du dossier
-2. S'assurer que git est configuré
-3. Vérifier la connexion GitHub
+Besoin d'un outil dans ton conteneur?
+
+**Contacte l'administrateur:**
+- GitHub: [Maison-Desjardins-de-Gore](https://github.com/Maison-Desjardins-de-Gore)
+- Mentionne: `@SeigneurDeGore`
 
 ---
 *Développé pour Clara - Machine Zenith*
