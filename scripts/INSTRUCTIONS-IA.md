@@ -23,67 +23,44 @@ Bienvenue sur la machine Zenith! Voici comment utiliser le système de mémoire 
 
 ## 📝 Comment Utiliser
 
-### Créer des Notes Journalières
+### 📅 Notes Journalières
+**Quand utiliser:** Chaque jour pour documenter ton activité générale, réflexions, et tâches.
+**Où:** `/home/node/ai-memory/memory/01-daily/YYYY-MM-DD.md`
 
-**Notes journalières** (recommandé):
 ```bash
 # Créer une note pour aujourd'hui
 vim /home/node/ai-memory/memory/01-daily/$(date +%Y-%m-%d).md
 ```
 
-**Notes spécifiques:**
-```bash
-# Notes sur un projet particulier
-vim /home/node/ai-memory/memory/01-daily/projet-x-notes.md
-```
-
-### Canaux (Channels)
-
-Quand tu approches de la limite de contexte (28k tokens):
+### 📊 Canaux (Channels)
+**Quand utiliser:** Quand tu approches de la limite de contexte (28k tokens) pour un canal spécifique.
+**Où:** `/home/node/ai-memory/memory/channels/[nom-canal]/YYYYMMDD_YYYYMMDD_HHmm.md`
 
 ```bash
 # Créer un résumé de canal
 vim /home/node/ai-memory/memory/channels/[nom-canal]/20260320_20260403_17h40.md
 ```
 
-**Format du nom de fichier:**
-`YYYYMMDD_YYYYMMDD_HHmm.md`
-- Première date: début de période
-- Deuxième date: fin de période
-- Heure: heure de création
-
-### Projets
-
-Suivi de projets spécifiques:
+### 📁 Projets
+**Quand utiliser:** Pour suivre un projet spécifique sur une période donnée.
+**Où:** `/home/node/ai-memory/memory/projects/[nom-projet]/YYYYMMDD_YYYYMMDD_HHmm.md`
 
 ```bash
-# Créer un dossier de projet
+# Créer un suivi de projet
 vim /home/node/ai-memory/memory/projects/[nom-projet]/20260320_20260403_17h40.md
 ```
 
-### Lire l'Historique
+### 🖥️ Informations Machine
+**Quand utiliser:** Pour voir les spécifications de la machine.
+**Où:** `/home/node/ai-memory/memory/02-machines/Zenith.md`
 
 ```bash
-# Voir toutes les notes
-ls /home/node/ai-memory/memory/01-daily/
-
-# Voir les canaux
-ls /home/node/ai-memory/memory/channels/
-
-# Voir les projets
-ls /home/node/ai-memory/memory/projects/
-
-# Lire une note spécifique
-cat /home/node/ai-memory/memory/01-daily/2026-04-08.md
-
-# Voir l'historique git
-git log --oneline
+cat /home/node/ai-memory/memory/02-machines/Zenith.md
 ```
 
 ## 📊 Format des Notes
 
 ### Notes Journalières
-
 ```markdown
 # [DATE] - [SUJET]
 
@@ -102,7 +79,6 @@ git log --oneline
 ```
 
 ### Résumés de Contexte (Channels/Projects)
-
 ```markdown
 # [Type]: [Nom]
 # Période: YYYYMMDD - YYYYMMDD
@@ -134,9 +110,9 @@ git push origin main
 
 ## ⚠️ Points Importants
 
-1. **Une note par jour** - Crée toujours une note journalière
+1. **Notes journalières** - Chaque jour pour ton activité
 2. **Résumés de contexte** - Quand tu approches 28k tokens
-3. **Structure claire** - Utilise les sections définies
+3. **Suivi de projets** - Un dossier par projet
 4. **Persistance** - Tout est sauvegardé dans le repo
 5. **Versioning** - Git suit toutes les modifications
 6. **Sécurité** - Ne partage pas de secrets sensibles
@@ -152,8 +128,8 @@ git push origin main
 Besoin d'un outil dans ton conteneur?
 
 **Contacte l'administrateur:**
+- Telegram: [@SeigneurDeGore](https://t.me/SeigneurDeGore)
 - GitHub: [Maison-Desjardins-de-Gore](https://github.com/Maison-Desjardins-de-Gore)
-- Mentionne: `@SeigneurDeGore`
 
 ---
 *Machine: Zenith | IA: Clara | Date: 2026-04-08*
