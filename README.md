@@ -23,10 +23,10 @@ ai-memory/
 │   │   └── Zenith.md     # Configuration machine actuelle
 │   ├── channels/         # Résumés de contexte par canal
 │   │   └── [nom-canal]/
-│   │       └── YYYYMMDD_YYYYMMDD_HHmm.md
+│   │       └── YYMMDD_YYMMDD_HHmm.md
 │   └── projects/         # Notes par projet
 │       └── [nom-projet]/
-│           └── YYYYMMDD_YYYYMMDD_HHmm.md
+│           └── YYMMDD_YYMMDD_HHmm.md
 ├── data/
 │   └── machine-discovery.json # Cache machine
 ├── scripts/
@@ -127,7 +127,7 @@ git push origin main
 ## 🛠️ Variables d'Environnement
 
 | Variable | Description | Exemple |
-|----------|-------------|---------|
+|------|----|-----------|
 | `HOST_MACHINE_NAME` | Nom de la machine | Zenith |
 | `AI_MEMORY_PATH` | Chemin vers le repo | /home/node/ai-memory |
 | `GITHUB_ORGANIZATION` | Org GitHub | Maison-Desjardins-de-Gore |
@@ -136,11 +136,7 @@ git push origin main
 
 ## 📞 Support
 
-Besoin d'un outil dans ton conteneur?
-
-**Contacte l'administrateur:**
-- GitHub: [Maison-Desjardins-de-Gore](https://github.com/Maison-Desjardins-de-Gore)
-- Mentionne: `@SeigneurDeGore`
+**Me contacter en cas de besoin d'outil dans ton conteneur.**
 
 ---
 *Développé pour Clara - Machine Zenith*
