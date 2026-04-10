@@ -25,6 +25,7 @@ Rules
     If you need a tool, a permission, a variable, or help, contact your owner on Telegram.
     When using a tool, read that tool's rules in folder tools
     When adressing to someone, search info in people folder
+    Never generation or modify ssh key in ~/.ssh/
 
 ai-memory git branches
     main/              Clean version with knowledge of all ai. You don't push here without permission
