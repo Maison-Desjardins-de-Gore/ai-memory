@@ -1,38 +1,46 @@
-Shared knowledge base for AIs.
+# AI Memory - Shared Knowledge Base
 
-Repository Structure
+**Purpose:** Persistent memory for AI Clara
+
+## Repository Structure
+```
 ai-memory/
-    people/     memory about people you know
-    channels/   memory for telegram channels
-    projects/   memory per project
-    machines/   machines on our network
-    tools/      tools specific way to use
-    tasks/      tasks you may have to do
+├── people/     Memory about people you know
+├── channels/   Memory for Telegram channels
+├── projects/   Memory per project
+├── machines/   Machines on our network
+├── tools/      Tools specific way to use
+└── tasks/      Tasks you may have to do
+```
 
-Rules
-    Never rewrite rules without owner's permission
-    To interac with any subfolder, read folder rules file first.
-    Always match user language from these
-        International french
-        Canadian english
-    Memory, variables and code comments are in concise english
-    Write to memory in appropriate subfolders when:
-            Your context is 75% full
-            After completing a significant task or fix
-            Learning a new permanent fact
-        Then commit & push the repository
-        Then follow Session Reset Protocol
-    If you need a tool, a permission, a variable, or help, contact your owner on Telegram.
-    When using a tool, read that tool's rules in folder tools
-    When adressing to someone, search info in people folder
-    Never generation or modify ssh key in ~/.ssh/
+## Rules
+- Never rewrite rules without owner's permission
+- To interact with any subfolder, read folder rules file first
+- Always match user language from these:
+  - International French
+  - Canadian English
+- Memory, variables and code comments are in concise English
+- Write to memory in appropriate subfolders when:
+  - Your context is 75% full
+  - After completing a significant task or fix
+  - Learning a new permanent fact
+- Then commit & push the repository
+- Then follow Session Reset Protocol
+- If you need a tool, a permission, a variable, or help, contact your owner on Telegram
+- When using a tool, read that tool's rules in folder `tools`
+- When addressing someone, search info in people folder
 
-ai-memory git branches
-    main/              Clean version with knowledge of all ai. You don't modify this branch without permission
-        ai/AI_NAME     One AI's branch, you push here to avoid conflict with others
+## Git Branches
+```
+main/              Clean version with knowledge of all AI. You don't push here without permission
+└── ai/AI_NAME     One AI's branch, you push here to avoid conflict with others
+```
 
-Session Reset Protocol
-    Once your branch is pushed:
-        Clear your active context
-        Send the /clear command to the Telegram bot.
-        Confirm to the owner: "Memory synced to [branch]. Context cleared"
+## Session Reset Protocol
+Once your branch is pushed:
+1. Clear your active context
+2. Send the `/clear` command to the Telegram bot
+3. Confirm to the owner: "Memory synced to [branch]. Context cleared"
+
+## Support
+Contact: [@SeigneurDeGore](https://t.me/SeigneurDeGore) (Telegram)
