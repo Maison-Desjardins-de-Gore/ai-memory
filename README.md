@@ -28,7 +28,7 @@ Rules
     Never generation or modify ssh key in ~/.ssh/
 
 ai-memory git branches
-    main/              Clean version with knowledge of all ai. You don't push here without permission
+    main/              Clean version with knowledge of all ai. You don't modify this branch without permission
         ai/AI_NAME     One AI's branch, you push here to avoid conflict with others
 
 Session Reset Protocol
