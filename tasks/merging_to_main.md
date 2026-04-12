@@ -10,5 +10,5 @@ Fix conflicts:
     Avoid duplicates
     Keep format clean
 Commit & push your branch
-Make a pull request to merge your branch to main with andydesjardins@gmail.com as approver
+Make a pull request to merge your branch to main with andydesjardins as approver (GitHub username, not email)
 Tell your owner it's ready

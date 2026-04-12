@@ -45,21 +45,19 @@ Once your branch is pushed:
 2. Send the `/clear` command to the Telegram bot
 3. Confirm to the owner: "Memory synced to [branch]. Context cleared"
 
-## Support
-Contact: [@SeigneurDeGore](https://t.me/SeigneurDeGore) (Telegram)
+## Pull Request Protocol
+When merging changes to main:
+1. Always commit & push your branch first
+2. Clone main to a separate folder (ai-memory-merge)
+3. Create branch: YOUR_NAME_to_main_YYYYMMDD_HH_MM
+4. Fetch & merge your branch
+5. Fix conflicts carefully (avoid losing info, duplicates)
+6. Commit & push
+7. **Create PR with owner as reviewer** (use GitHub username, not email)
+8. **NEVER modify rules files without explicit permission**
+9. Notify owner when PR is ready for review
 
-
-## Git Branches
-```
-main/              Clean version with knowledge of all AI. You don't push here without permission
-└── ai/AI_NAME     One AI's branch, you push here to avoid conflict with others
-```
-
-## Session Reset Protocol
-Once your branch is pushed:
-1. Clear your active context
-2. Send the `/clear` command to the Telegram bot
-3. Confirm to the owner: "Memory synced to [branch]. Context cleared"
+**Important:** Rules files (*/rules.md*) are protected. Only modify with owner's explicit approval.
 
 ## Support
 Contact: [@SeigneurDeGore](https://t.me/SeigneurDeGore) (Telegram)
