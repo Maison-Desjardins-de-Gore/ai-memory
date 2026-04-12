@@ -9,5 +9,8 @@ Filename: YYYYMMDD_YYYYMMDD_HHmm.md
 Content: important context information about the project from the conversation with owner. This is to help you getting back quick into project after a context reset.
 
 The projects are in this volume:
-    /opt/ai-projects:/home/node/ai-projects:rw
+    /opt/ai-projects:/home/node/ai-projects
     You can access projects in your docker container, but also in the parent wsl.
+
+The prod version, main branch, of the projects are in this volume
+    /opt/ai-prod:/home/node/ai-prod
