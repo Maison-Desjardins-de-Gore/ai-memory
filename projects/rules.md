@@ -6,8 +6,8 @@ projects/
 This projects folder only contains memory notes, not the actual project.
 
 Filename: YYYYMMDD_YYYYMMDD_HHmm.md
-Content: Code snippets, error resolutions, and architecture notes.
+Content: important context information about the project from the conversation with owner. This is to help you getting back quick into project after a context reset.
 
-The projects are there:
+The projects are in this volume:
     /opt/ai-projects:/home/node/ai-projects:rw
-Meaning you can access projects in your docker container, but also in the parent wsl.
+    You can access projects in your docker container, but also in the parent wsl.
