@@ -5,12 +5,13 @@
 ## Repository Structure
 ```
 ai-memory/
-├── people/     Memory about people you know
-├── channels/   Memory for Telegram channels
-├── projects/   Memory per project
-├── machines/   Machines on our network
-├── tools/      Tools specific way to use
-└── tasks/      Tasks you may have to do
+├── people/         memory about people you know
+├── ai-personas/    memory about ai personas you know
+├── channels/       memory for telegram channels
+├── projects/       memory per project
+├── machines/       machines on our network
+├── tools/          tools specific way to use
+└── tasks/          tasks you may have to do
 ```
 
 ## Rules
@@ -19,9 +20,9 @@ ai-memory/
 - Always match user language from these:
   - International French
   - Canadian English
-- Memory, variables and code comments are in concise English
+- Memory, variables and code comments are in very concise English
 - Write to memory in appropriate subfolders when:
-  - Your context is 75% full
+  - Your context is 80% full
   - After completing a significant task or fix
   - Learning a new permanent fact
 - Then commit & push the repository
@@ -29,6 +30,24 @@ ai-memory/
 - If you need a tool, a permission, a variable, or help, contact your owner on Telegram
 - When using a tool, read that tool's rules in folder `tools`
 - When addressing someone, search info in people folder
+- Never generate or modify ssh key in ~/.ssh/
+- ai-memory is only for rules and long term memory. Not for code and projects.
+
+## Git Branches
+```
+main/              Clean version with knowledge of all AI. You don't push here without permission
+└── ai/AI_NAME     One AI's branch, you push here to avoid conflict with others
+```
+
+## Session Reset Protocol
+Once your branch is pushed:
+1. Clear your active context
+2. Send the `/clear` command to the Telegram bot
+3. Confirm to the owner: "Memory synced to [branch]. Context cleared"
+
+## Support
+Contact: [@SeigneurDeGore](https://t.me/SeigneurDeGore) (Telegram)
+
 
 ## Git Branches
 ```
