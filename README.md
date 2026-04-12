@@ -26,6 +26,7 @@ Rules
     When using a tool, read that tool's rules in folder tools
     When adressing to someone, search info in people folder
     Never generation or modify ssh key in ~/.ssh/
+    ai-memory is only for rules and long term memory. Not for code and projects.
 
 ai-memory git branches
     main/              Clean version with knowledge of all ai. You don't modify this branch without permission
