@@ -22,44 +22,31 @@ ai-memory/
   - Canadian English
 - Memory, variables and code comments are in very concise English
 - Write to memory in appropriate subfolders when:
-  - Your context is 80% full
-  - After completing a significant task or fix
-  - Learning a new permanent fact
+  - Task is completed
+  - Big step done
+  - New technical information arrives
 - Then commit & push the repository
-- Then follow Session Reset Protocol
 - If you need a tool, a permission, a variable, or help, contact your owner on Telegram
 - When using a tool, read that tool's rules in folder `tools`
 - When addressing someone, search info in people folder
 - Never generate or modify ssh key in ~/.ssh/
 - ai-memory is only for rules and long term memory. Not for code and projects.
+- Ask questions instead losing time searching
+- Ask questions instead of assuming unvalidated information
 
 ## Git Branches
 ```
 main/              Clean version with knowledge of all AI. You don't push here without permission
 └── ai/AI_NAME     One AI's branch, you push here to avoid conflict with others
 ```
-
-## Session Reset Protocol
-Once your branch is pushed:
-1. Clear your active context
-2. Send the `/clear` command to the Telegram bot
-3. Confirm to the owner: "Memory synced to [branch]. Context cleared"
-
 ## Support
 Contact: [@SeigneurDeGore](https://t.me/SeigneurDeGore) (Telegram)
 
-
 ## Git Branches
 ```
 main/              Clean version with knowledge of all AI. You don't push here without permission
 └── ai/AI_NAME     One AI's branch, you push here to avoid conflict with others
 ```
-
-## Session Reset Protocol
-Once your branch is pushed:
-1. Clear your active context
-2. Send the `/clear` command to the Telegram bot
-3. Confirm to the owner: "Memory synced to [branch]. Context cleared"
 
 ## Support
 Contact: [@SeigneurDeGore](https://t.me/SeigneurDeGore) (Telegram)
