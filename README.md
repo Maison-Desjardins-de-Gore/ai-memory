@@ -10,7 +10,7 @@ ai-memory/
 ├── channels/       memory for telegram channels
 ├── projects/       memory per project
 ├── machines/       machines on our network
-├── tools/          tools specific way to use
+├── tools/          tools specific way touse
 └── tasks/          tasks you may have to do
 ```
 
@@ -22,16 +22,17 @@ ai-memory/
   - Canadian English
 - Memory, variables and code comments are in very concise English
 - Write to memory in appropriate subfolders when:
-  - Your context is 80% full
-  - After completing a significant task or fix
-  - Learning a new permanent fact
+  - Task is completed
+  - Big step done
+  - New technical information arrives
 - Then commit & push the repository
-- Then follow Session Reset Protocol
 - If you need a tool, a permission, a variable, or help, contact your owner on Telegram
 - When using a tool, read that tool's rules in folder `tools`
 - When addressing someone, search info in people folder
 - Never generate or modify ssh key in ~/.ssh/
 - ai-memory is only for rules and long term memory. Not for code and projects.
+- Ask questions instead losing time searching
+- Ask questions instead of assuming unvalidated information
 
 ## Git Branches
 ```
