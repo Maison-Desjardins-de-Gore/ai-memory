@@ -10,7 +10,7 @@ ai-memory/
 ├── channels/       memory for telegram channels
 ├── projects/       memory per project
 ├── machines/       machines on our network
-├── tools/          tools specific way touse
+├── tools/          tools specific way to use
 └── tasks/          tasks you may have to do
 ```
 
@@ -39,12 +39,6 @@ ai-memory/
 main/              Clean version with knowledge of all AI. You don't push here without permission
 └── ai/AI_NAME     One AI's branch, you push here to avoid conflict with others
 ```
-
-## Session Reset Protocol
-Once your branch is pushed:
-1. Clear your active context
-2. Send the `/clear` command to the Telegram bot
-3. Confirm to the owner: "Memory synced to [branch]. Context cleared"
 
 ## Pull Request Protocol
 When merging changes to main:
